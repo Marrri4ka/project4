@@ -93,16 +93,21 @@ $(document).ready(function() {
       if ($("#ham").is(":checked")) {
         toppingsArray.push("ham");
       }
+      if (toppingsArray.length === 0) {
+        alert("choose at least 1 topping");
+      } else {
 
 
-      $(".confirmation").slideDown();
-      $(".toppings").slideUp();
-      var pizza = new Pizza(size, toppingsArray);
-      $("#final-price").text("You ordered " + size + " pizza with: " + toppingsArray);
-      $("#final-price").show();
 
-      $("#price").text("Pay: $" +
-        pizza.calculatePrice());
+        $(".confirmation").slideDown();
+        $(".toppings").slideUp();
+        var pizza = new Pizza(size, toppingsArray);
+        $("#final-price").text("You ordered " + size + " pizza with: " + toppingsArray);
+        $("#final-price").show();
+
+        $("#price").text("Total : $" +
+          pizza.calculatePrice());
+      }
     });
 
   });

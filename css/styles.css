@@ -10,8 +10,14 @@ float: right;
 }
 
 .confirmation{
-  display: none;
+display: none;
+  width: 600px;
+  margin: 0 auto;
 }
 #complete-order{
 float: right;
+}
+
+h4{
+  text-align: center;
 }
