@@ -1,6 +1,6 @@
-function Pizza(size, toppings) {
-  this.size = size,
-    this.toppings = toppings
+function Pizza(size) {
+  this.size = size
+
 }
 
 Pizza.prototype.calculatePrice = function() {
@@ -17,14 +17,21 @@ Pizza.prototype.calculatePrice = function() {
   if (this.size === "large") {
     price = 16;
   }
+  return price;
 }
 
 $(document).ready(function() {
   $("#confirm").click(function() {
 
     var size = $('input[name=inlineRadioOptions]:checked').val();
-    $("#final-price").text("You ordered " + size + "pizza");
+    $("#final-price").text("You ordered " + size + " pizza");
     $("#final-price").show();
+    var finalPrice = new Pizza(size);
+    $("#price").text("Pay: $" +
+      finalPrice.calculatePrice());
+    $("#price").show();
+
+
   });
 
 });
