@@ -21,3 +21,12 @@ float: right;
 h4{
   text-align: center;
 }
+.delivery {
+  width: 500px;
+  display: none;
+  margin: 0 auto;
+}
+
+#continue1{
+float: right;
+}
