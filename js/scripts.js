@@ -102,9 +102,12 @@ $(document).ready(function() {
         $(".confirmation").slideDown();
         $(".toppings").slideUp();
         var pizza = new Pizza(size, toppingsArray);
-        $("#final-price").text("You ordered " + size + " pizza with: " + toppingsArray);
+        $("#final-price").text("You ordered " + size + " pizza with: ");
         $("#final-price").show();
-
+        for (var k = 0; k < toppingsArray.length; k++) {
+          var l = toppingsArray[k];
+          $("ul").append("<li>" + l + "</li>")
+        }
         $("#price").text("Total : $" +
           pizza.calculatePrice());
       }
