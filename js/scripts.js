@@ -67,32 +67,35 @@ $(document).ready(function() {
 
       var toppingsArray = [];
       // create function
+      $("input:checkbox[name=topping]:checked").each(function() {
+        toppingsArray.push($(this).val());
+      })
 
-      if ($("#tomato").is(":checked")) {
-        toppingsArray.push("tomato");
-      }
-      if ($("#cheese").is(":checked")) {
-        toppingsArray.push("cheese");
-      }
-
-      if ($("#pineapple").is(":checked")) {
-        toppingsArray.push("pineapple");
-      }
-      if ($("#red-pepper").is(":checked")) {
-        toppingsArray.push("red-pepper");
-      }
-      if ($("#bacon").is(":checked")) {
-        toppingsArray.push("bacon");
-      }
-      if ($("#black-olives").is(":checked")) {
-        toppingsArray.push("black-olives");
-      }
-      if ($("#mushroom").is(":checked")) {
-        toppingsArray.push("mushroom");
-      }
-      if ($("#ham").is(":checked")) {
-        toppingsArray.push("ham");
-      }
+      // if ($("#tomato").is(":checked")) {
+      //   toppingsArray.push("tomato");
+      // }
+      // if ($("#cheese").is(":checked")) {
+      //   toppingsArray.push("cheese");
+      // }
+      //
+      // if ($("#pineapple").is(":checked")) {
+      //   toppingsArray.push("pineapple");
+      // }
+      // if ($("#red-pepper").is(":checked")) {
+      //   toppingsArray.push("red-pepper");
+      // }
+      // if ($("#bacon").is(":checked")) {
+      //   toppingsArray.push("bacon");
+      // }
+      // if ($("#black-olives").is(":checked")) {
+      //   toppingsArray.push("black-olives");
+      // }
+      // if ($("#mushroom").is(":checked")) {
+      //   toppingsArray.push("mushroom");
+      // }
+      // if ($("#ham").is(":checked")) {
+      //   toppingsArray.push("ham");
+      // }
       if (toppingsArray.length === 0) {
         alert("choose at least 1 topping");
       } else {
