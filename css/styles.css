@@ -5,3 +5,13 @@ img{
 #confirm{
 float: right;
 }
+.toppings{
+  display: none;
+}
+
+.confirmation{
+  display: none;
+}
+#complete-order{
+float: right;
+}

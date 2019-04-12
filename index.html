@@ -12,195 +12,206 @@
 
 <body>
   <div class="container">
-    <h1>Please select pizza size</h1>
-    <div class="row">
 
-      <div class="col-md-3">
+    <div class="size">
+      <h1>Please select pizza size</h1>
 
 
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radio-small" value="small">
-              <label class="form-check-label" for="radio-small">Small</label>
+      <div class="row">
+
+        <div class="col-md-3">
+
+
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radio-small" value="small">
+                <label class="form-check-label" for="radio-small">Small</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img id="small" src="img/small.png" alt="small-pizza">
             </div>
           </div>
-          <div class="card-body">
-            <img id="small" src="img/small.png" alt="small-pizza">
-          </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radio-medium" value="medium">
-              <label class="form-check-label" for="radio-medium">Medium</label>
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radio-medium" value="medium">
+                <label class="form-check-label" for="radio-medium">Medium</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img id="medium" src="img/medium.png" alt="medium-pizza">
             </div>
           </div>
-          <div class="card-body">
-            <img id="medium" src="img/medium.png" alt="medium-pizza">
-          </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radio-large" value="large">
-              <label class="form-check-label" for="radio-large">Large</label>
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radio-large" value="large">
+                <label class="form-check-label" for="radio-large">Large</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img id="large" src="img/large.png" alt="large-pizza">
             </div>
           </div>
-          <div class="card-body">
-            <img id="large" src="img/large.png" alt="large-pizza">
-          </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radio-x-large" value="x-large">
-              <label class="form-check-label" for="x-large">X-Large</label>
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radio-x-large" value="x-large">
+                <label class="form-check-label" for="x-large">X-Large</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img id="x-large" src="img/x-large.png" alt="x-large-pizza">
             </div>
           </div>
-          <div class="card-body">
-            <img id="x-large" src="img/x-large.png" alt="x-large-pizza">
-          </div>
         </div>
-      </div>
-    </div><br><br>
+      </div><br><br>
 
 
-    <button id="confirm" class="btn btn-lg btn-primary" type="button" name="button">Confirm</button><br><br><br>
+      <button id="confirm" class="btn btn-lg btn-primary" type="button" name="button">Confirm</button><br><br><br>
+    </div>
+    <div class="toppings">
+      <h1>Please select toppings</h1>
 
 
-    <div class="row">
+      <div class="row">
 
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="cheese" name="topping" value="cheese">
-              <label class="form-check-label" for="cheese">cheese</label>
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="cheese" name="topping" value="cheese">
+                <label class="form-check-label" for="cheese">cheese</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="img/cheese.png" alt="chesse-picture">
             </div>
           </div>
-          <div class="card-body">
-            <img src="img/cheese.png" alt="chesse-picture">
-          </div>
         </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="tomato" name="topping" value="tomato">
-              <label class="form-check-label" for="tomato">tomato</label>
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="tomato" name="topping" value="tomato">
+                <label class="form-check-label" for="tomato">tomato</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="img/tomato.png" alt="tomato-picture">
             </div>
           </div>
-          <div class="card-body">
-            <img src="img/tomato.png" alt="tomato-picture">
-          </div>
         </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="pineapple" name="topping" value="pineapple">
-              <label class="form-check-label" for="pineapple">pineapple</label>
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="pineapple" name="topping" value="pineapple">
+                <label class="form-check-label" for="pineapple">pineapple</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="img/pineapple.png" alt="pineapple-picture">
             </div>
           </div>
-          <div class="card-body">
-            <img src="img/pineapple.png" alt="pineapple-picture">
-          </div>
         </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="red-pepper" name="topping" value="red-pepper">
-              <label class="form-check-label" for="red-pepper">red pepper</label>
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="red-pepper" name="topping" value="red-pepper">
+                <label class="form-check-label" for="red-pepper">red pepper</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="img/red_pepper.png" alt="red-pepper">
             </div>
           </div>
-          <div class="card-body">
-            <img src="img/red_pepper.png" alt="red-pepper">
-          </div>
         </div>
-      </div>
 
-    </div><br>
-
+      </div><br>
 
 
-    <div class="row">
 
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="bacon" name="topping" value="bacon">
-              <label class="form-check-label" for="bacon">bacon</label>
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="bacon" name="topping" value="bacon">
+                <label class="form-check-label" for="bacon">bacon</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="img/bacon.png" alt="bacon">
             </div>
           </div>
-          <div class="card-body">
-            <img src="img/bacon.png" alt="bacon">
-          </div>
         </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="black-olives" name="topping" value="black-olives">
-              <label class="form-check-label" for="black-olives">black olives</label>
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="black-olives" name="topping" value="black-olives">
+                <label class="form-check-label" for="black-olives">black olives</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="img/black_olives.png" alt="black_olives-picture">
             </div>
           </div>
-          <div class="card-body">
-            <img src="img/black_olives.png" alt="black_olives-picture">
-          </div>
         </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="mushroom" name="topping" value="mushroom">
-              <label class="form-check-label" for="mushroom">mushroom</label>
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="mushroom" name="topping" value="mushroom">
+                <label class="form-check-label" for="mushroom">mushroom</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="img/mushroom.png" alt="mushroom-picture">
             </div>
           </div>
-          <div class="card-body">
-            <img src="img/mushroom.png" alt="mushroom-picture">
-          </div>
         </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="card card-info">
-          <div class="card-header">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="ham" name="topping" value="ham">
-              <label class="form-check-label" for="ham">ham</label>
+        <div class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="ham" name="topping" value="ham">
+                <label class="form-check-label" for="ham">ham</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="img/ham.png" alt="ham-picture">
             </div>
           </div>
-          <div class="card-body">
-            <img src="img/ham.png" alt="ham-picture">
-          </div>
         </div>
-      </div>
-
+      </div><br><br>
+      <button id="complete-order" class="btn btn-lg btn-primary" type="button" name="button">Complete order</button>
     </div>
 
-    <p><span id="final-price"></span></p>
-    <p><span id="price"></span></p>
-    <p><span id="topping"></span></p>
+    <div class="confirmation">
 
+
+      <p><span id="final-price"></span></p>
+      <p><span id="price"></span></p>
+      <p><span id="topping"></span></p>
+    </div>
   </div>
 </body>
 

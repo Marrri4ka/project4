@@ -18,17 +18,42 @@ Pizza.prototype.calculatePrice = function() {
   if (this.size === "x-large") {
     price = 16;
   }
-  for (var i = 0; i < toppingsArray.length; i++) {
-    if (toppingsArray[i] === "tomato") {
-      price = +2;
-
+  for (var i = 0; i < this.toppings.length; i++) {
+    if (this.toppings[i] === "tomato") {
+      price += 1;
     }
-    return price;
+    if (this.toppings[i] === "cheese") {
+      price += 1;
+    }
+    if (this.toppings[i] === "red-pepper") {
+      price += 1;
+    }
+    if (this.toppings[i] === "pineapple") {
+      price += 1;
+    }
+    if (this.toppings[i] === "bacon") {
+      price += 2;
+    }
+    if (this.toppings[i] === "black-olives") {
+      price += 2;
+    }
+    if (this.toppings[i] === "mushroom") {
+      price += 2;
+    }
+    if (this.toppings[i] === "ham") {
+      price += 2;
+    }
+
   }
+  return price;
 }
 
 $(document).ready(function() {
   $("#confirm").click(function() {
+    $(".toppings").slideDown();
+    $(".size").slideUp();
+
+
 
     var size = $('input[name=inlineRadioOptions]:checked').val();
     var toppingsArray = [];
@@ -61,14 +86,16 @@ $(document).ready(function() {
 
 
 
+    $("#complete-order").click(function() {
+      $(".confirmation").slideDown();
+      $(".toppings").slideUp();
+      var pizza = new Pizza(size, toppingsArray);
+      $("#final-price").text("You ordered " + size + " pizza with: " + toppingsArray);
+      $("#final-price").show();
 
-    $("#final-price").text("You ordered " + size + " pizza with:" + toppingsArray);
-    $("#final-price").show();
-    var pizza = new Pizza(size, toppingsArray);
-    $("#price").text("Pay: $" +
-      pizza.calculatePrice());
-    $("#price").show();
-
+      $("#price").text("Pay: $" +
+        pizza.calculatePrice());
+    });
 
   });
 
