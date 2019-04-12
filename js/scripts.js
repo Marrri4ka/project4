@@ -50,43 +50,51 @@ Pizza.prototype.calculatePrice = function() {
 
 $(document).ready(function() {
   $("#confirm").click(function() {
-    $(".toppings").slideDown();
-    $(".size").slideUp();
-
-
-
     var size = $('input[name=inlineRadioOptions]:checked').val();
-    var toppingsArray = [];
 
-    if ($("#tomato").is(":checked")) {
-      toppingsArray.push("tomato");
-    }
-    if ($("#cheese").is(":checked")) {
-      toppingsArray.push("cheese");
-    }
+    if (!size) {
+      alert("you forgot to choose size!");
+    } else {
+      $(".toppings").slideDown();
+      $(".size").slideUp();
 
-    if ($("#pineapple").is(":checked")) {
-      toppingsArray.push("pineapple");
-    }
-    if ($("#red-pepper").is(":checked")) {
-      toppingsArray.push("red-pepper");
-    }
-    if ($("#bacon").is(":checked")) {
-      toppingsArray.push("bacon");
-    }
-    if ($("#black-olives").is(":checked")) {
-      toppingsArray.push("black-olives");
-    }
-    if ($("#mushroom").is(":checked")) {
-      toppingsArray.push("mushroom");
-    }
-    if ($("#ham").is(":checked")) {
-      toppingsArray.push("ham");
     }
 
 
 
     $("#complete-order").click(function() {
+
+
+      var toppingsArray = [];
+      // create function
+
+      if ($("#tomato").is(":checked")) {
+        toppingsArray.push("tomato");
+      }
+      if ($("#cheese").is(":checked")) {
+        toppingsArray.push("cheese");
+      }
+
+      if ($("#pineapple").is(":checked")) {
+        toppingsArray.push("pineapple");
+      }
+      if ($("#red-pepper").is(":checked")) {
+        toppingsArray.push("red-pepper");
+      }
+      if ($("#bacon").is(":checked")) {
+        toppingsArray.push("bacon");
+      }
+      if ($("#black-olives").is(":checked")) {
+        toppingsArray.push("black-olives");
+      }
+      if ($("#mushroom").is(":checked")) {
+        toppingsArray.push("mushroom");
+      }
+      if ($("#ham").is(":checked")) {
+        toppingsArray.push("ham");
+      }
+
+
       $(".confirmation").slideDown();
       $(".toppings").slideUp();
       var pizza = new Pizza(size, toppingsArray);
