@@ -22,8 +22,8 @@ _To run this project,install it locally:_
 
  List of specs :
 
-| Behavior       | Input          | Output  |
-| ------------- |:-------------:| -----:|
+| Behavior       | Input          |
+| ------------- |:-------------:| 
 |User can select size   | small, medium, large, x-large |
 |Calculate price based on the selected pizza-size  | small - $9 |
 |Add toppings option |  cheese, tomato, ham |
