@@ -68,6 +68,10 @@ $(document).ready(function() {
     });
 
     $("#continue1").click(function() {
+      var delivery = $('input[name=inlineRadioOptions]:checked').val();
+
+      $("#delivery1").text(delivery);
+      $("#delivery1").show();
       $(".delivery").slideUp();
       var toppingsArray = [];
       // create function
