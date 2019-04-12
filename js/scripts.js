@@ -8,6 +8,7 @@ function Pizza(size, toppings) {
 
 
 Pizza.prototype.calculatePrice = function() {
+
   var price;
   if (this.size === "mini") {
     price = 9;
@@ -37,11 +38,25 @@ $(document).ready(function() {
       toppingsArray.push("cheese");
     }
 
-    if ($("ham").is(":checked")) {
+    if ($("#pineapple").is(":checked")) {
+      toppingsArray.push("pineapple");
+    }
+    if ($("#red-pepper").is(":checked")) {
+      toppingsArray.push("red-pepper");
+    }
+    if ($("#bacon").is(":checked")) {
+      toppingsArray.push("bacon");
+    }
+    if ($("#black-olives").is(":checked")) {
+      toppingsArray.push("black-olives");
+    }
+    if ($("#mushroom").is(":checked")) {
+      toppingsArray.push("mushroom");
+    }
+    if ($("#ham").is(":checked")) {
       toppingsArray.push("ham");
     }
     console.log(toppingsArray);
-
 
 
 
