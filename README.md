@@ -1,15 +1,14 @@
-# Pizza ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-#### A web application that takes a number from a user and returns a range of numbers from 0 to the user inputted number with the exception , 04.12.2019
+# Pizza Order ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+#### A website for a pizza company where a user can choose one or more individual toppings and a size to order a pizza and see the final cost , 04.12.2019
 
 #### By _**Mariia Stashuk**_
 
 ## Description
 
-Web application that takes a number from a user and returns a range of numbers from 0 to the user inputted number with the following exceptions:
+A website for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
 
-* Numbers that contain a 1: all digits are replaced (all digits) with "Beep!"
-* Numbers that contain a 2: all digits are replaced (all digits) with "Boop!"
-* Numbers that contain a 3: all digits are replaced (all digits) with "I'm sorry, Dave. I'm afraid I can't do that."
+* The user can choose toppings and size for the pizza they'd like to order.
+
 
 
 ## Setup/Installation Requirements
@@ -21,18 +20,15 @@ _To run this project,install it locally:_
 
 ## Beep Boop Specifications
 
- List of specs from the simplest possible behavior to the most complex behavior:
+ List of specs :
 
 | Behavior       | Input          | Output  |
 | ------------- |:-------------:| -----:|
-|The program returns a range of numbers from 0 to the users inputted number     | 4  |0,1,2,3,4 |
-|Numbers that contain a 1: all digits are replaced  with "Beep!"     | 1     |   "Beep!" |
-| Numbers that contain a 2: all digits are replaced with "Boop!" | 2      |   "Boop!" |
-| Numbers that contain a 3: all digits are replaced with "I'm sorry.." | 3     |"I'm sorry, Dave. I'm afraid I can't do that." |
-|The number 13 should be replaced | 13     | "I'm sorry, Dave. I'm afraid I can't do that." |
-|The number 21 should be replaced | 21    |   "Boop!" |
-|  For numbers that are divisible by 3, replace the name Dave in "I'm sorry, Dave. I'm afraid I can't do that" with the name provided by the user. | 12    |  "I'm sorry,[users inputted name]. I'm afraid I can't do that."  |
-
+|User can select size   | small, medium, large, x-large |
+|Calculate price based on the selected pizza-size  | small - $9 |
+|Add toppings option |  cheese, tomato, ham |
+| Calculate price based on selected toppings | ham + $2 to price |
+|Check if the user check at least one box | if no - alert! |
 
 ## Known Bugs
 
