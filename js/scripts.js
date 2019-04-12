@@ -1,7 +1,11 @@
-function Pizza(size) {
-  this.size = size
+function Pizza(size, toppings) {
+  this.size = size,
+    this.toppings = toppings
 
 }
+
+
+
 
 Pizza.prototype.calculatePrice = function() {
   var price;
@@ -24,11 +28,30 @@ $(document).ready(function() {
   $("#confirm").click(function() {
 
     var size = $('input[name=inlineRadioOptions]:checked').val();
-    $("#final-price").text("You ordered " + size + " pizza");
+    var toppingsArray = [];
+
+    if ($("#tomato").is(":checked")) {
+      toppingsArray.push("tomato");
+    }
+    if ($("#cheese").is(":checked")) {
+      toppingsArray.push("cheese");
+    }
+
+    if ($("ham").is(":checked")) {
+      toppingsArray.push("ham");
+    }
+    console.log(toppingsArray);
+
+
+
+
+    $("#final-price").text("You ordered " + size + " pizza with:" + toppingsArray);
     $("#final-price").show();
-    var finalPrice = new Pizza(size);
+    var pizza = new Pizza(size, toppingsArray);
+
+
     $("#price").text("Pay: $" +
-      finalPrice.calculatePrice());
+      pizza.calculatePrice());
     $("#price").show();
 
 
