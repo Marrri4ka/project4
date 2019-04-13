@@ -49,69 +49,69 @@ Pizza.prototype.calculatePrice = function() {
 }
 
 $(document).ready(function() {
-  $("#confirm").click(function() {
-    var size = $('input[name=inlineRadioOptions]:checked').val();
+$("#confirm").click(function() {
+  var size = $('input[name=inlineRadioOptions]:checked').val();
 
-    if (!size) {
-      alert("you forgot to choose size!");
-    } else {
-      $(".toppings").slideDown();
-      $(".size").slideUp();
-    }
+  if (!size) {
+    alert("you forgot to choose size!");
+  } else {
+    $(".toppings").slideDown();
+    $(".size").slideUp();
+  }
+});
+
+$("#confirm").click(function() {
+  var size = $('input[name=inlineRadioOptions]:checked').val();
+
+  if (!size) {
+    alert("you forgot to choose size!");
+  } else {
+    $(".toppings").slideDown();
+    $(".size").slideUp();
+  }
+});
+
+$("#complete-order").click(function() {
+  var toppingsArray = [];
+  $("input:checkbox[name=topping]:checked").each(function() {
+    toppingsArray.push($(this).val());
   });
+  if (toppingsArray.length === 0) {
+    alert("choose at least 1 topping");
+  } else {
+    $(".delivery").slideDown();
+    $(".toppings").slideUp();
+  }
+});
 
-  $("#confirm").click(function() {
-    var size = $('input[name=inlineRadioOptions]:checked').val();
-
-    if (!size) {
-      alert("you forgot to choose size!");
-    } else {
-      $(".toppings").slideDown();
-      $(".size").slideUp();
-    }
-  });
-
-  $("#complete-order").click(function() {
+$("#continue1").click(function() {
+  var delivery = $('input[name=inlineRadioDelivery]:checked').val();
+  if (!delivery) {
+    alert("Please choose delivery method");
+  } else {
+    $("#delivery1").text(delivery);
+    $("#delivery1").show();
+    $(".delivery").slideUp();
     var toppingsArray = [];
     $("input:checkbox[name=topping]:checked").each(function() {
       toppingsArray.push($(this).val());
     });
-    if (toppingsArray.length === 0) {
-      alert("choose at least 1 topping");
-    } else {
-      $(".delivery").slideDown();
-      $(".toppings").slideUp();
+
+    $(".confirmation").slideDown();
+    $(".toppings").slideUp();
+    var size = $('input[name=inlineRadioOptions]:checked').val();
+    var pizza = new Pizza(size, toppingsArray);
+    $("#final-price").text("You ordered " + size + " pizza with: ");
+    $("#final-price").show();
+    for (var k = 0; k < toppingsArray.length; k++) {
+      var l = toppingsArray[k];
+      $("ul").append("<li>" + l + "</li>")
     }
-  });
-
-  $("#continue1").click(function() {
-    var delivery = $('input[name=inlineRadioDelivery]:checked').val();
-    if (!delivery) {
-      alert("Please choose delivery method");
-    } else {
-      $("#delivery1").text(delivery);
-      $("#delivery1").show();
-      $(".delivery").slideUp();
-      var toppingsArray = [];
-      $("input:checkbox[name=topping]:checked").each(function() {
-        toppingsArray.push($(this).val());
-      });
-
-      $(".confirmation").slideDown();
-      $(".toppings").slideUp();
-      var size = $('input[name=inlineRadioOptions]:checked').val();
-      var pizza = new Pizza(size, toppingsArray);
-      $("#final-price").text("You ordered " + size + " pizza with: ");
-      $("#final-price").show();
-      for (var k = 0; k < toppingsArray.length; k++) {
-        var l = toppingsArray[k];
-        $("ul").append("<li>" + l + "</li>")
-      }
-      $("#price").text("Total : $" +
-        pizza.calculatePrice());
-    }
-  });
-
+    $("#price").text("Total : $" +
+      pizza.calculatePrice());
+  }
+});
+});
 
 
 });

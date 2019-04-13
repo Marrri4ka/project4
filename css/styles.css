@@ -18,6 +18,9 @@ display: none;
 float: right;
 }
 
+#order-more-pizza{
+  float: right;
+}
 h4{
   text-align: center;
 }
