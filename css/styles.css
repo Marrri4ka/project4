@@ -16,6 +16,7 @@ display: none;
 }
 #complete-order{
 float: right;
+display:none;
 }
 
 #order-more-pizza{
